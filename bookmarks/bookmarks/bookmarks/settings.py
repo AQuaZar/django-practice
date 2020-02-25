@@ -98,6 +98,8 @@ LOGIN_REDIRECT_URL = "dashboard"
 LOGIN_URL = "login"
 LOGOUT_URL = "logout"
 
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
 
