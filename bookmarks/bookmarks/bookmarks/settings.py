@@ -25,13 +25,14 @@ SECRET_KEY = "^5h@9bzri$nyk9*n&6et9gn3%4-crto5tf!&2-07r7btcp7&cy"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.0.103", "localhost"]
+ALLOWED_HOSTS = ["192.168.0.103", "localhost", "mysite.com", "127.0.0.1"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
     "account.apps.AccountConfig",
+    "social_django",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -88,7 +89,11 @@ DATABASES = {
 AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
     "account.authentication.EmailAuthBackend",
+    "social_core.backends.google.GoogleOAuth2",
 ]
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = ""
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = ""
 
 AUTH_PASSWORD_VALIDATORS = [
     {
