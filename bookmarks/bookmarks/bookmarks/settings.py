@@ -25,7 +25,13 @@ SECRET_KEY = "^5h@9bzri$nyk9*n&6et9gn3%4-crto5tf!&2-07r7btcp7&cy"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.0.103", "localhost", "mysite.com", "127.0.0.1"]
+ALLOWED_HOSTS = [
+    "192.168.0.103",
+    "localhost",
+    "mysite.com",
+    "127.0.0.1",
+    "92d959b2.ngrok.io",
+]
 
 
 # Application definition
@@ -132,4 +138,3 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 
 STATIC_URL = "/static/"
-
